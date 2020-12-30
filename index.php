@@ -1,23 +1,22 @@
 <?php 
 
-require_once("vendor/autoload.php");
+	require_once("vendor/autoload.php");
 
-use \RDFOils\DB\Sql;
+	  // use \RDFOils\DB\Sql;
+	use \Slim\Slim;
+	use \RDFOils\Page;
 
-$app = new \Slim\Slim();
+	$app = new Slim();
 
-$app->config('debug', true);
+	$app->config('debug', true);
 
-$app->get('/', function() {
-    
-	$sql = new Sql();
+	$app->get('/', function() 
+		{    
+			$page = new Page();
 
-	$results = $sql->select("SELECT * FROM tb_properties");
+			$page->setTpl("index");
+		});
 
-	echo json_encode($results);
+	$app->run();
 
-});
-
-$app->run();
-
- ?>
+?>
