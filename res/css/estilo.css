@@ -1,0 +1,54 @@
+#home {
+  /*background: #ffc107;*/
+  background: #241906;
+  color: white;
+}
+
+#logo a {
+  width: 400px;
+  height: 110px;
+  text-indent: -9999px;
+  display: block;
+  background: url(img/logo-essenciais.png) no-repeat;
+}
+
+nav ul li a:hover {
+  border-bottom: 1px solid #535858;
+}
+
+.bg-coffee {
+  background: #241906;
+}
+
+.bg-coffee2 {
+  background: #422d08;
+}
+
+.text-coffee {
+  color: #422d08;
+}
+
+.caixa {
+  padding: 60px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.padding-dir {
+  padding-right: 10px;
+  font-size: 1.2rem;
+}
+
+.padding-esq {
+  padding-left: 10px;
+}
+
+.padding-laterais {
+  padding: 0 60px;
+}
+
+.ul-oleos {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}

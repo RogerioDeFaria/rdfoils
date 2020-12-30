@@ -1,0 +1,21 @@
+{
+    "name": "rogeriodefaria/rdfoils",
+    "description": "RDF Óleos Essenciais",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Rogerio JG de Faria",
+            "email": "thor.mendizabal@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+    	"slim/slim":"2.0",
+    	"rain/raintpl":">=3.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "RDFoils\\": "vendor\\RDFoils\\php-classes\\src"
+        }
+    }
+}
