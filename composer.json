@@ -15,7 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-            "RDFoils\\": "vendor\\RDFoils\\php-classes\\src"
+            "RDFOils\\": "vendor\\RDFOils\\php-classes\\src"
         }
     }
 }

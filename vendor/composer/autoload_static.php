@@ -9,14 +9,14 @@ class ComposerStaticInit4765b6290b6fe61cbf07e4f252cf757a
     public static $prefixLengthsPsr4 = array (
         'R' => 
         array (
-            'RDFoils\\' => 8,
+            'RDFOils\\' => 8,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'RDFoils\\' => 
+        'RDFOils\\' => 
         array (
-            0 => __DIR__ . '/..' . '/RDFoils/php-classes/src',
+            0 => __DIR__ . '/..' . '/RDFOils/php-classes/src',
         ),
     );
 

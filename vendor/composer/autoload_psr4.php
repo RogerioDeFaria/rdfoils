@@ -6,5 +6,5 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'RDFoils\\' => array($vendorDir . '/RDFoils/php-classes/src'),
+    'RDFOils\\' => array($vendorDir . '/RDFOils/php-classes/src'),
 );
