@@ -34,8 +34,7 @@ class User extends Model {
 
 			return $user;
 		} 
-		else 
-		{
+		else {
 			throw new \Exception("Usuário inexistente ou senha inválida.");
 		}
 	}
@@ -45,7 +44,7 @@ class User extends Model {
 		if (
 			!isset($_SESSION[User::SESSION])
 			||
-			$_SESSION[User::SESSION]
+			!$_SESSION[User::SESSION]
 			||
 			!(int)$_SESSION[User::SESSION]["iduser"] > 0
 			||
