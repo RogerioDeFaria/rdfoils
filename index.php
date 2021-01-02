@@ -13,7 +13,7 @@
 
 	$app->config('debug', true);
 
-	$app->get('/', function() 
+	$app->get("/", function() 
 		{    
 			$page = new Page();
 
@@ -123,7 +123,7 @@
 	$app->post("/admin/oils/:idoils", function($idoils)
 		{
 			User::verifyLogin();
-			
+
 			$oil = new Oils();
 
 			$oil->get((int)$idoils);
@@ -136,8 +136,24 @@
 			exit;
 		});
 
+	$app->get("/oils-list", function()
+		{
+			$page = new Page();
+
+			$page->setTpl("oils-list");
+		});
+
+	$app->get("/conceitos", function()
+		{
+			$page = new Page();
+
+			$page->setTpl("conceitos");
+		});
+
 	/***********************************************/
 
 	$app->run();
 
 ?>
+
+/conceitos
