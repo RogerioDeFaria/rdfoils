@@ -1,4 +1,4 @@
-        
+<?php if(!class_exists('Rain\Tpl')){exit;}?>        
         <section id="home"> <!-- Início seção home  -->
           <div class="container mt-5">
             <div class="row">
@@ -54,7 +54,7 @@
                        </li>
                        <li class="list-group-item">
                          <strong>Sistemas corporais afetados: </strong>
-                            Sistema digestivo, Sistema nervoso, Pele, Músculos e ossos. 
+                            Sistema digestivo, Sistema nervoso, Pele, Músculos e Ossos. 
                        </li>
                     </ul>
                   </div>

@@ -50,7 +50,7 @@
                 <div class="align-self-center text-center">
                   <img src="../res/site/img/oleo1.png" class="img-fluid w-25">
                   <p>Conceitos sobre os óleos</p>
-                  <a href="conceitos" class="btn btn-secondary btn-lg btn-block">CONCEITOS</a>
+                  <a href="concepts" class="btn btn-secondary btn-lg btn-block">CONCEITOS</a>
                 </div>
               </div>
               <div class="col-md-3">
@@ -64,14 +64,14 @@
                 <div class="align-self-center text-center">
                   <img src="../res/site/img/blend.png" class="img-fluid w-25">
                   <p>Informações sobre os blends</p>
-                  <a href="blends" class="btn btn-secondary btn-lg btn-block">BLENDS</a>
+                  <a href="blends-list" class="btn btn-secondary btn-lg btn-block">BLENDS</a>
                 </div>
               </div>
               <div class="col-md-3">
                 <div class="align-self-center text-center">
                   <img src="../res/site/img/sintomas4.png" class="img-fluid w-25">
-                  <p>Óleos sugeridos por sintoma</p>
-                  <a href="sintomas" class="btn btn-secondary btn-lg btn-block">SINTOMAS</a>
+                  <p>Óleos sugeridos por condições</p>
+                  <a href="conditions" class="btn btn-secondary btn-lg btn-block">CONDIÇÕES</a>
                 </div>
               </div>
             </div>

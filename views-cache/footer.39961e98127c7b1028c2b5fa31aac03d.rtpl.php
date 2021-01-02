@@ -3,7 +3,7 @@
             <div class="row">
               <div class="col-md-8">
                 <p>
-                  <a href="index.html">
+                  <a href="/">
                     <i class="fa fa-copyright fa-lg" aria-hidden="true"></i>
                     2020 Minha Empresa Ltda.
                   </a>

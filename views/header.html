@@ -30,16 +30,16 @@
                   <a href="/" class="nav-link">HOME</a>
                 </li>
                 <li class="nav-item">
-                  <a href="conceitos" class="nav-link">CONCEITOS</a></a>
+                  <a href="concepts" class="nav-link">CONCEITOS</a></a>
                 </li>
                 <li class="nav-item">
                   <a href="oils-list" class="nav-link">ÓLEOS</a>
                 </li>
                 <li class="nav-item">
-                  <a href="blends" class="nav-link">BLENDS</a>
+                  <a href="blends-list" class="nav-link">BLENDS</a>
                 </li>
                 <li class="nav-item">
-                  <a href="sintomas" class="nav-link">SINTOMAS</a>
+                  <a href="conditions" class="nav-link">CONDIÇÕES</a>
                 </li>
               </ul>
             </div>

@@ -143,11 +143,46 @@
 			$page->setTpl("oils-list");
 		});
 
-	$app->get("/conceitos", function()
+	$app->get("/concepts", function()
 		{
 			$page = new Page();
 
-			$page->setTpl("conceitos");
+			$page->setTpl("concepts");
+		});
+
+	$app->get("/blends-list", function()
+		{
+			$page = new Page();
+
+			$page->setTpl("blends-list");
+		});
+
+	$app->get("/conditions", function()
+		{
+			$page = new Page();
+
+			$page->setTpl("conditions");
+		});
+
+	$app->get("/peppermint", function()
+		{
+			$page = new Page();
+
+			$page->setTpl("peppermint");
+		});
+
+	$app->get("/deepblue", function()
+		{
+			$page = new Page();
+
+			$page->setTpl("deepblue");
+		});
+
+	$app->get("/hematomas", function()
+		{
+			$page = new Page();
+
+			$page->setTpl("hematomas");
 		});
 
 	/***********************************************/
@@ -155,5 +190,3 @@
 	$app->run();
 
 ?>
-
-/conceitos
