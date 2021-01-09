@@ -1,4 +1,4 @@
-        
+<?php if(!class_exists('Rain\Tpl')){exit;}?>        
         <section id="home"> <!-- Início seção home  -->
           <div class="container mt-5">
             <div class="row">

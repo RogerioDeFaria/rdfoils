@@ -3,11 +3,11 @@
 <!-- Content Header (Page header) -->
 <section class="content-header">
   <h1>
-    Lista de Óleos
+    Lista de Blends
   </h1>
   <ol class="breadcrumb">
     <li><a href="/admin"><i class="fa fa-dashboard"></i> Home</a></li>
-    <li class="active"><a href="/admin/oils">Óleos</a></li>
+    <li class="active"><a href="/admin/blends">Blends</a></li>
   </ol>
 </section>
 
@@ -19,7 +19,7 @@
   		<div class="box box-primary">
             
             <div class="box-header">
-              <a href="/admin/oils/create" class="btn btn-success">Cadastrar Óleo</a>
+              <a href="/admin/blends/create" class="btn btn-success">Cadastrar Blend</a>
             </div>
 
             <div class="box-body no-padding">
@@ -27,21 +27,21 @@
                 <thead>
                   <tr>
                     <th style="width: 10px">#</th>
-                    <th>Nome do Óleo em Inglês</th>
-                    <th>Nome do Óleo em Português</th>
+                    <th>Nome do Blend em Inglês</th>
+                    <th>Nome do Blend em Português</th>
                     <th style="width: 200px">&nbsp;</th>
                   </tr>
                 </thead>
                 <tbody>
-                  {loop="$oils"}    
+                  {loop="$blends"}
                   <tr>
-                    <td>{$value.idoil}</td>
+                    <td>{$value.idblend}</td>
                     <td>{$value.desenglishname}</td>
                     <td>{$value.desportuguesename}</td>
-                    <td> 
-                      <a href="/admin/oilfacts/{$value.idoil}" class="btn btn-info btn-xs"><i class="fa fa-align-justify"></i> Fatos</a>
-                      <a href="/admin/oils/{$value.idoil}" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Editar</a>
-                      <a href="/admin/oils/{$value.idoil}/delete" onclick="return confirm('Deseja realmente excluir este registro?')" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i> Excluir</a>
+                    <td>
+                      <a href="/admin/blendfacts/{$value.idblend}" class="btn btn-info btn-xs"><i class="fa fa-align-justify"></i> Fatos</a>
+                      <a href="/admin/blends/{$value.idblend}" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Editar</a>
+                      <a href="/admin/blends/{$value.idblend}/delete" onclick="return confirm('Deseja realmente excluir este registro?')" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i> Excluir</a>
                     </td>
                   </tr>
                   {/loop}
