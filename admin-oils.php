@@ -3,7 +3,6 @@
 	use \RDFOils\Page;
 	use \RDFOils\PageAdmin;
 	use \RDFOils\Model\Oils;
-	use \RDFOils\Model\OilFacts;
 	use \RDFOils\Model\Blends;
 	use \RDFOils\Model\User;
 
@@ -92,7 +91,7 @@ $app->get("/admin/oils", function()
 		{
 			User::verifyLogin();
 
-			$oil = new OilFacts();
+			$oil = new Oils();
 
 			$oil->get((int)$idoils);
 

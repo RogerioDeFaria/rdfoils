@@ -18,10 +18,27 @@ class Oils extends Model {
 	{
 		$sql = new Sql();
 
-		$results = $sql->select("CALL sp_oils_save(:idoil, :desenglishname, :desportuguesename)", array(
+		$results = $sql->select("CALL sp_oils_save(:idoil, :desenglishname, :desportuguesename, :desscientificname, :descommonname , :desfamily, :desorigin, :desextrmethod, :description, :desdilution, :dessecurity, :desapplications, :desbenefit, :desbenefittype, :desprimaryuses, :inaromatic_use, :intopical_use, :internal_use, :desphoto1, :desphoto2)", array(
 			":idoil"=>$this->getidoil(),
-			"desenglishname"=>$this->getdesenglishname(),
-			"desportuguesename"=>$this->getdesportuguesename()
+			":desenglishname"=>$this->getdesenglishname(),
+			":desportuguesename"=>$this->getdesportuguesename(),
+			":desscientificname"=>$this->getdesscientificname(),
+			":descommonname"=>$this->getdescommonname(),
+			":desfamily"=>$this->getdesfamily(),
+			":desorigin"=>$this->getdesorigin(),
+			":desextrmethod"=>$this->getdesextrmethod(),
+			":description"=>$this->getdescription(),
+			":desdilution"=>$this->getdesdilution(),
+			":dessecurity"=>$this->getdessecurity(),
+			":desapplications"=>$this->getdesapplications(),
+			":desbenefit"=>$this->getdesbenefit(),
+			":desbenefittype"=>1,
+			":desprimaryuses"=>$this->getdesprimaryuses(),
+			":inaromatic_use"=>$this->getinaromatic_use(),
+			":intopical_use"=>$this->getintopical_use(),
+			":internal_use"=>$this->getinternal_use(),
+			":desphoto1"=>$this->getdesphoto1(),
+			":desphoto2"=>$this->getdesphoto2()
 		));
 
 		$this->setData($results[0]);
@@ -31,7 +48,11 @@ class Oils extends Model {
 	{
 		$sql = new Sql();
 
-		$results = $sql->select("SELECT * FROM tb_oils WHERE idoil = :idoil", [
+		$results = $sql->select("
+			SELECT * FROM tb_oils a 
+			INNER JOIN tb_oil_facts b 
+			ON a.idoil = b.tb_oils_idoil
+			WHERE idoil = :idoil", [
 			':idoil'=>$idoil
 		]);
 
@@ -42,9 +63,14 @@ class Oils extends Model {
 	{
 		$sql = new Sql();
 
+		$sql->query("DELETE FROM tb_oil_facts WHERE tb_oils_idoil = :idoil", [
+			':idoil'=>$this->getidoil()
+		]);
+
 		$sql->query("DELETE FROM tb_oils WHERE idoil = :idoil", [
 			':idoil'=>$this->getidoil()
 		]);
+		
 	}
 
 }

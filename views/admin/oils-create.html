@@ -26,10 +26,40 @@
         <form role="form" action="/admin/oils/create" method="post">
           <div class="box-body">
             <div class="form-group">
+              <!-- Tabela tb_oils -->
               <label for="desenglishname">Nome do óleo em inglês</label>
               <input type="text" class="form-control" id="desenglishname" name="desenglishname" placeholder="Digite o nome do óleo em inglês">
               <label for="desportuguesename">Nome do óleo em português</label>
               <input type="text" class="form-control" id="desportuguesename" name="desportuguesename" placeholder="Digite o nome do óleo em português">
+              <!-- Tabela tb_oil_facts -->
+              <label for="desscientificname">Nome científico</label>
+              <input type="text" class="form-control" id="desscientificname" name="desscientificname" placeholder="Digite o nome científico">
+              <label for="descommonname">Nome popular</label>
+              <input type="text" class="form-control" id="descommonname" name="descommonname" placeholder="Digite o nome popular">
+              <label for="desfamily">Família botânica</label>
+              <input type="text" class="form-control" id="desfamily" name="desfamily" placeholder="Digite a família botânica">
+              <label for="desorigin">Orígem do óleo</label>
+              <input type="text" class="form-control" id="desorigin" name="desorigin" placeholder="Digite a orígem do óleo">
+              <label for="desextrmethod">Método de extração</label>
+              <input type="text" class="form-control" id="desextrmethod" name="desextrmethod" placeholder="Digite o método de extração">
+              <label for="description">Descrição do produto</label>
+              <input type="text" class="form-control" id="description" name="description" placeholder="Digite a descrição do produto">
+              <label for="desdilution">Diluição</label>
+              <input type="text" class="form-control" id="desdilution" name="desdilution" placeholder="Digite o modo de diluição">
+              <label for="dessecurity">Informações de segurança</label>
+              <input type="text" class="form-control" id="dessecurity" name="dessecurity" placeholder="Digite as informações de segurança">
+              <label for="desapplications">Aplicações</label>
+              <input type="text" class="form-control" id="desapplications" name="desapplications" placeholder="Digite as aplicações">
+              <label for="desbenefit">Benefícios primários</label>
+              <input type="text" class="form-control" id="desbenefit" name="desbenefit" placeholder="Digite os benefícios primários">
+              <label for="desprimaryuses">Usos primários comuns</label>
+              <input type="text" class="form-control" id="desprimaryuses" name="desprimaryuses" placeholder="Digite os usos primários comuns">
+              <label for="inaromatic_use">Uso aromático? (0 - não / 1 - sim)</label>
+              <input type="text" class="form-control" id="inaromatic_use" name="inaromatic_use" placeholder="Uso aromático - 0 (não) ou 1 (sim)">
+              <label for="intopical_use">Uso tópico? (0 - não / 1 - sim)</label>
+              <input type="text" class="form-control" id="intopical_use" name="intopical_use" placeholder="Uso tópico - 0 (não) ou 1 (sim)">
+              <label for="internal_use">Uso interno? (0 - não / 1 - sim)</label>
+              <input type="text" class="form-control" id="internal_use" name="internal_use" placeholder="Uso interno - 0 (não) ou 1 (sim)">
             </div>
           </div>
           <!-- /.box-body -->
