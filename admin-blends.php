@@ -47,9 +47,9 @@
 
 			$blend = new Blends();
 
-			$$blend->get((int)$idblends);
+			$blend->get((int)$idblends);
 
-			$$blend->delete();
+			$blend->delete();
 
 			header('Location: /admin/blends');
 			exit;
@@ -84,6 +84,21 @@
 
 			header('Location: /admin/blends');
 			exit;
+		});
+
+	$app->get("/admin/blendfacts/:idblends", function($idblends)
+		{
+			User::verifyLogin();
+
+			$blend = new Blends();
+
+			$blend->get((int)$idblends);
+
+			$page = new PageAdmin();
+
+			$page->setTpl("blendfacts", [
+				'blendfacts'=>$blend->getValues()
+			]);
 		});
 
 ?>

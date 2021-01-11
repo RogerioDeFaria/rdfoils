@@ -21,10 +21,32 @@
         <form role="form" action="/admin/blends/{$blends.idblend}" method="post">
           <div class="box-body">
             <div class="form-group">
+              <!-- Table tb_blends -->
               <label for="desenglishname">Nome do Blend em Inglês</label>
               <input type="text" class="form-control" id="desenglishname" name="desenglishname" placeholder="Digite o nome do Blend em Inglês" value="{$blends.desenglishname}"><br>
               <label for="desportuguesename">Nome do Blend em Português</label>
               <input type="text" class="form-control" id="desportuguesename" name="desportuguesename" placeholder="Digite o nome do Blend em Português" value="{$blends.desportuguesename}">
+              <!-- Table tb_blends_facts -->              
+              <label for="descomponents">Método de extração</label>
+              <input type="text" class="form-control" id="descomponents" name="descomponents" placeholder="Digite o método de extração" value="{$blends.descomponents}">
+              <label for="description">Descrição do produto</label>
+              <input type="text" class="form-control" id="description" name="description" placeholder="Digite a descrição do produto" value="{$blends.description}">
+              <label for="desdilution">Diluição</label>
+              <input type="text" class="form-control" id="desdilution" name="desdilution" placeholder="Digite o modo de diluição" value="{$blends.desdilution}">
+              <label for="dessecurity">Informações de segurança</label>
+              <input type="text" class="form-control" id="dessecurity" name="dessecurity" placeholder="Digite as informações de segurança" value="{$blends.dessecurity}">
+              <label for="desapplications">Aplicações</label>
+              <input type="text" class="form-control" id="desapplications" name="desapplications" placeholder="Digite as aplicações" value="{$blends.desapplications}">
+              <label for="desbenefit">Benefícios primários</label>
+              <input type="text" class="form-control" id="desbenefit" name="desbenefit" placeholder="Digite os benefícios primários" value="{$blends.desbenefit}">
+              <label for="desprimaryuses">Usos primários comuns</label>
+              <input type="text" class="form-control" id="desprimaryuses" name="desprimaryuses" placeholder="Digite os usos primários comuns" value="{$blends.desprimaryuses}">
+              <label for="inaromatic_use">Uso aromático? (0 - não / 1 - sim)</label>
+              <input type="text" class="form-control" id="inaromatic_use" name="inaromatic_use" placeholder="Uso aromático - 0 (não) ou 1 (sim)" value="{$blends.inaromatic_use}">
+              <label for="intopical_use">Uso tópico? (0 - não / 1 - sim)</label>
+              <input type="text" class="form-control" id="intopical_use" name="intopical_use" placeholder="Uso tópico - 0 (não) ou 1 (sim)" value="{$blends.intopical_use}">
+              <label for="internal_use">Uso interno? (0 - não / 1 - sim)</label>
+              <input type="text" class="form-control" id="internal_use" name="internal_use" placeholder="Uso interno - 0 (não) ou 1 (sim)" value="{$blends.internal_use}">
             </div>
           </div>
           <!-- /.box-body -->
