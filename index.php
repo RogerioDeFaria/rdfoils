@@ -19,7 +19,7 @@
 		{    
 			$page = new Page();
 
-			$page->setTpl("testeImagem");
+			$page->setTpl("index-fig");
 		});
 
 
