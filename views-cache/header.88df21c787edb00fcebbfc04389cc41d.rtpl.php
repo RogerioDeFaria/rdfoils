@@ -258,7 +258,8 @@ desired effect
         <!-- Optionally, you can add icons to the links -->
         <li><a href="/admin/oils"><i class="fa fa-link"></i> <span>Óleos</span></a></li>
         <li><a href="/admin/blends"><i class="fa fa-link"></i> <span>Blends</span></a></li>
-        <li><a href="/admin/conditions"><i class="fa fa-link"></i> <span>Condições</span></a></li>        
+        <li><a href="/admin/conditions"><i class="fa fa-link"></i> <span>Condições</span></a></li>
+        <li><a href="/admin/users"><i class="fa fa-users"></i> <span>Usuários</span></a></li>        
       <!-- /.sidebar-menu -->
     </section>
     <!-- /.sidebar -->
