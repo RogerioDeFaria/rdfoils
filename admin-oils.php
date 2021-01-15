@@ -102,15 +102,35 @@ $app->get("/admin/oils", function()
 			]);
 		});
 
-
-
-
 	$app->get("/oils-list", function()
 		{
+			$page = (isset($_GET['page'])) ? (int)$_GET['page'] : 1;
+
+			$oils = new Oils();
+
+			$pagination = $oils->getOilsPage($page);
+
+			$pages = [];
+
+			for ($i=1; $i <= $pagination["pages"]; $i++) 
+			{ 
+				array_push($pages, [
+					'link'=>'/oils-list'.'?page='.$i,
+					'page'=>$i
+				]);
+			}
+
 			$page = new Page();
 
-			$page->setTpl("oils-list");
+			$page->setTpl("oils-list", [
+				'oils'=>$pagination["data"],
+				'pages'=>$pages
+			]);
 		});
+
+
+
+
 
 	$app->get("/concepts", function()
 		{

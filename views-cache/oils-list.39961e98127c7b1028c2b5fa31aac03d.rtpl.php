@@ -1,4 +1,4 @@
-        
+<?php if(!class_exists('Rain\Tpl')){exit;}?>        
         <section id="home"> <!-- Início seção home  -->
           <div class="container mt-5 pt-4 pb-3">
             <div class="row">
@@ -21,17 +21,19 @@
                 <div class="zigzag-bottom"></div>
                 <div class="container text-center">
                     <div class="row">                        
-                        {loop="$oils"}
+                        <?php $counter1=-1;  if( isset($oils) && ( is_array($oils) || $oils instanceof Traversable ) && sizeof($oils) ) foreach( $oils as $key1 => $value1 ){ $counter1++; ?>
+
                         <!--div class="col-md-3 col-sm-4 col-6"-->
                         <div class="col">
                             <div class="single-shop-product">
                                 <div>    <!--class="product-upper"-->
-                                    <img src="{$value.desphoto1}" alt="">
+                                    <img src="<?php echo htmlspecialchars( $value1["desphoto1"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" alt="">
                                 </div>
-                                <h6><a href="#">{$value.desenglishname} <em>({$value.desportuguesename})</em></a></h6>
+                                <h6><a href="#"><?php echo htmlspecialchars( $value1["desenglishname"], ENT_COMPAT, 'UTF-8', FALSE ); ?> <em>(<?php echo htmlspecialchars( $value1["desportuguesename"], ENT_COMPAT, 'UTF-8', FALSE ); ?>)</em></a></h6>
                             </div>                            
                         </div>                        
-                        {/loop}
+                        <?php } ?>
+
                         
                     </div>
 
@@ -42,9 +44,11 @@
                             <div class="product-pagination text-center">
                                 <nav>
                                     <ul class="pagination">
-                                    {loop="$pages"}
-                                        <li class="page-item"><a class="page-link" href="{$value.link}">{$value.page}</a></li>
-                                    {/loop}
+                                    <?php $counter1=-1;  if( isset($pages) && ( is_array($pages) || $pages instanceof Traversable ) && sizeof($pages) ) foreach( $pages as $key1 => $value1 ){ $counter1++; ?>
+
+                                        <li class="page-item"><a class="page-link" href="<?php echo htmlspecialchars( $value1["link"], ENT_COMPAT, 'UTF-8', FALSE ); ?>"><?php echo htmlspecialchars( $value1["page"], ENT_COMPAT, 'UTF-8', FALSE ); ?></a></li>
+                                    <?php } ?>
+
                                     </ul>
                                 </nav>                        
                             </div>

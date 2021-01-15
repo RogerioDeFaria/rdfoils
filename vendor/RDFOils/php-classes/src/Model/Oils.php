@@ -14,6 +14,17 @@ class Oils extends Model {
 		return $sql->select("SELECT * FROM tb_oils ORDER BY desenglishname");
 	}
 
+	public static function listAllFacts()
+	{
+		$sql = new Sql();
+
+		return $sql->select("
+			SELECT * FROM tb_oils a 
+			INNER JOIN tb_oil_facts b 
+			ON a.idoil = b.tb_oils_idoil"
+		);
+	}
+
 	public function save()
 	{
 		$sql = new Sql();
@@ -71,6 +82,29 @@ class Oils extends Model {
 			':idoil'=>$this->getidoil()
 		]);
 		
+	}
+
+	public function getOilsPage($page = 1, $itemsPerPage = 12)
+	{
+		$start = ($page - 1) * $itemsPerPage;
+
+		$sql = new Sql();
+
+		$results = $sql->select("
+			SELECT SQL_CALC_FOUND_ROWS *
+			FROM tb_oils a
+			INNER JOIN tb_oil_facts b
+			ON a.idoil = b.tb_oils_idoil
+			LIMIT $start, $itemsPerPage;
+		");
+
+		$resultTotal = $sql->select("SELECT FOUND_ROWS() AS nrtotal;");
+
+		return [
+			'data'=>$results,
+			'total'=>(int)$resultTotal[0]["nrtotal"],
+			'pages'=>ceil($resultTotal[0]["nrtotal"] / $itemsPerPage)
+		];
 	}
 
 }
