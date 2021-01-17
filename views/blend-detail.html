@@ -1,0 +1,105 @@
+        
+        <section id="home"> <!-- Início seção home  -->
+          <div class="container mt-5">
+            <div class="row">
+              <div class="col-md-3">
+                <div class="align-self-center text-center">
+                  <img src="{$blends.desphoto2}" class="img-fluid w-75">
+                </div>
+              </div>
+              <div class="col-md-6 align-self-center text-center">
+                <h4>{$blends.desenglishname}</h4>
+                <h4><em>({$blends.desportuguesename})</em></h4>
+              </div>
+              <div class="col-md-3">
+                <div class="align-self-center text-center">
+                  <img src="{$blends.desphoto3}" class="img-fluid w-75">
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </section> <!-- Fim seção home  -->
+        
+        <section class="caixa"> <!-- Início seção Detalhes do Blend -->
+          <div class="container">
+            <div class="row">
+
+              <div class="card-columns">
+                
+                <div class="card border-secondary align-self-top text-center">
+                  <h5 class="card-header">Descrição</h5>
+                  <div class="card-body text-coffee">
+                    <p class="card-text">{$blends.description}</p>
+                  </div>
+                </div> <!-- Fim cartão -->
+                
+                <div class="card border-secondary align-self-top text-center">
+                  <h5 class="card-header">Fatos rápidos</h5>
+                  <div class="card-body text-coffee">
+                    <ul class="list-group list-group-flush">
+                       <li class="list-group-item">
+                         <strong>Óleos componentes: </strong> {$blends.descomponents}
+                       </li>
+                       <li class="list-group-item">
+                         <strong>Métodos de aplicação:</strong><br>
+                           Aromático:  /  Tópico:  /  Interno:<br>
+                           {if="$blends.inaromatic_use>0"} Sim {else} Não {/if}  /  
+                           {if="$blends.intopical_use>0"} Sim {else} Não {/if} /
+                           {if="$blends.internal_use>0"} Sim {else} Não {/if}
+                       </li>
+                    </ul>
+                  </div>
+                </div> <!-- Fim cartão -->
+                
+                <div class="card border-secondary align-self-top text-center">
+                  <h5 class="card-header">Usos primários comuns</h5>
+                  <div class="card-body text-coffee">
+                    <p class="card-text">
+                      <ul class="ul-oleos">
+                        <li>
+                          {$blends.desprimaryuses}
+                        </li>
+                      </ul>
+                    </p>
+                  </div>                  
+                </div>  <!-- Fim cartão -->
+                
+                <div class="card border-secondary align-self-top text-center">
+                  <h5 class="card-header">Métodos comuns de aplicação</h5>
+                  <div class="card-body text-coffee">
+                    <p class="card-text">
+                      <i class="fa fa-hand-paper-o" aria-hidden="true"></i>
+                      : {$blends.desapplications} <br> 
+                    </p>
+                  </div>
+                  <div class="card-footer text-muted">
+                    <i class="fa fa-hand-paper-o pl-2 pr-2" aria-hidden="true"> - Tópico</i>
+                    <i class="fa fa-fire pl-2 pr-2" aria-hidden="true"> - Aromático</i>
+                    <i class="fa fa-tint pl-2 pr-2" aria-hidden="true"> - Interno</i>
+                  </div>
+                </div>  <!-- Fim cartão -->
+                
+                <div class="card border-secondary align-self-top text-center">
+                  <h5 class="card-header">Benefícios primários</h5>
+                  <div class="card-body text-coffee">
+                    <p class="card-text">
+                      {$blends.desbenefit}
+                    </p>
+                  </div>
+                </div>  <!-- Fim cartão -->
+                
+                <div class="card border-secondary align-self-top text-center">
+                  <h5 class="card-header">Informações de segurança</h5>
+                  <div class="card-body text-coffee">
+                    <p class="card-text">
+                       {$blends.dessecurity}
+                    </p>
+                  </div>
+                </div> <!-- Fim cartão -->
+                
+              </div>
+              
+            </div>
+          </div>
+        </section> <!-- Fim seção Detalhes do Blend -->

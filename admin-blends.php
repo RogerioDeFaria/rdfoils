@@ -1,6 +1,6 @@
 <?php
 
-	use \RDFBlends\Page;
+	use \RDFOils\Page;
 	use \RDFOils\PageAdmin;
 	use \RDFOils\Model\Blends;
 	use \RDFOils\Model\User;
@@ -100,5 +100,42 @@
 				'blendfacts'=>$blend->getValues()
 			]);
 		});
+
+	$app->get("/blends-list", function()
+		{
+			$page = (isset($_GET['page'])) ? (int)$_GET['page'] : 1;
+
+			$search = (isset($_GET['search'])) ? $_GET['search'] : "";
+
+			$blends = new Blends();
+
+			if ($search != '') {
+				$pagination = $blends->getBlendsPageSearch($search, $page);
+			} else {
+				$pagination = $blends->getBlendsPage($page);
+			}
+
+			$pages = [];
+
+			for ($i=1; $i <= $pagination["pages"]; $i++) 
+			{ 
+				array_push($pages, [
+					'link'=>'/blends-list?'.http_build_query([
+						'page'=>$i,
+						'search'=>$search
+					]),
+					'page'=>$i
+				]);
+			}
+
+			$page = new Page();
+
+			$page->setTpl("blends-list", [
+				'blends'=>$pagination["data"],
+				'pages'=>$pages,
+				'search'=>$search
+			]);
+		});
+
 
 ?>

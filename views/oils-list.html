@@ -2,13 +2,22 @@
         <section id="home"> <!-- Início seção home  -->
           <div class="container mt-5 pt-4 pb-3">
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-md-10">
                 <h4>Relação dos Óleos Essenciais</h4>
               </div>
-              <div class="col-lg-6 d-flex"> <!-- Textos da seção -->
-                <div class="align-self-center">
+              <div class="col-md-2 d-flex"> <!-- Pesquisa -->
+                <div class="align-self-right">
+                    <div class="box-tools">
+                        <form action="" class="search-form">
+                            <div class="form-group has-feedback" style="width: 150px;">
+                                <label for="search" class="sr-only">Pesquisar</label>
+                                <input type="text" class="form-control" name="search" id="search" placeholder="pesquisar" value="{$search}">
+                                <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-              </div> <!-- fim Textos da seção -->
+              </div> <!-- fim Pesquisa -->
             </div>
           </div>
         </section> <!-- Fim seção home  -->
@@ -26,9 +35,11 @@
                         <div class="col">
                             <div class="single-shop-product">
                                 <div>    <!--class="product-upper"-->
-                                    <img src="{$value.desphoto1}" alt="">
+                                    <a href="/oils/{$value.desurl}">
+                                        <img src="{$value.desphoto1}" alt="">
+                                    </a>
                                 </div>
-                                <h6><a href="#">{$value.desenglishname} <em>({$value.desportuguesename})</em></a></h6>
+                                <h6><a href="/oils/{$value.desurl}">{$value.desenglishname} <em>({$value.desportuguesename})</em></a></h6>
                             </div>                            
                         </div>                        
                         {/loop}

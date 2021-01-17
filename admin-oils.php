@@ -3,7 +3,6 @@
 	use \RDFOils\Page;
 	use \RDFOils\PageAdmin;
 	use \RDFOils\Model\Oils;
-	use \RDFOils\Model\Blends;
 	use \RDFOils\Model\User;
 
 $app->get("/admin/oils", function()
@@ -106,16 +105,25 @@ $app->get("/admin/oils", function()
 		{
 			$page = (isset($_GET['page'])) ? (int)$_GET['page'] : 1;
 
+			$search = (isset($_GET['search'])) ? $_GET['search'] : "";
+
 			$oils = new Oils();
 
-			$pagination = $oils->getOilsPage($page);
+			if ($search != '') {
+				$pagination = $oils->getOilsPageSearch($search, $page);
+			} else {
+				$pagination = $oils->getOilsPage($page);
+			}			
 
 			$pages = [];
 
 			for ($i=1; $i <= $pagination["pages"]; $i++) 
 			{ 
 				array_push($pages, [
-					'link'=>'/oils-list'.'?page='.$i,
+					'link'=>'/oils-list?'.http_build_query([
+						'page'=>$i,
+						'search'=>$search
+					]), 
 					'page'=>$i
 				]);
 			}
@@ -124,7 +132,8 @@ $app->get("/admin/oils", function()
 
 			$page->setTpl("oils-list", [
 				'oils'=>$pagination["data"],
-				'pages'=>$pages
+				'pages'=>$pages,
+				'search'=>$search
 			]);
 		});
 
@@ -137,13 +146,6 @@ $app->get("/admin/oils", function()
 			$page = new Page();
 
 			$page->setTpl("concepts");
-		});
-
-	$app->get("/blends-list", function()
-		{
-			$page = new Page();
-
-			$page->setTpl("blends-list");
 		});
 
 	$app->get("/conditions", function()

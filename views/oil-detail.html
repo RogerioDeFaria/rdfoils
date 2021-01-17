@@ -1,0 +1,110 @@
+        
+        <section id="home"> <!-- Início seção home  -->
+          <div class="container mt-5">
+            <div class="row">
+              <div class="col-md-3">
+                <div class="align-self-center text-center">
+                  <img src="{$oils.desphoto2}" class="img-fluid w-75">
+                </div>
+              </div>
+              <div class="col-md-6 align-self-center text-center">
+                <h4>{$oils.desenglishname}</h4>
+                <h4><em>({$oils.desportuguesename})</em></h4><br>
+                <h6>Nome científico: <em>{$oils.desscientificname}</em></h6>
+              </div>
+              <div class="col-md-3">
+                <div class="align-self-center text-center">
+                  <img src="{$oils.desphoto3}" class="img-fluid w-75">
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </section> <!-- Fim seção home  -->
+        
+        <section class="caixa"> <!-- Início seção Detalhes do Óleo -->
+          <div class="container">
+            <div class="row">
+
+              <div class="card-columns">
+                
+                <div class="card border-secondary align-self-top text-center">
+                  <h5 class="card-header">Descrição</h5>
+                  <div class="card-body text-coffee">
+                    <p class="card-text">{$oils.description}</p>
+                  </div>
+                </div> <!-- Fim cartão -->
+                
+                <div class="card border-secondary align-self-top text-center">
+                  <h5 class="card-header">Fatos rápidos</h5>
+                  <div class="card-body text-coffee">
+                    <ul class="list-group list-group-flush">
+                       <li class="list-group-item">
+                         <strong>Método de extração: </strong> {$oils.desextrmethod}
+                       </li>
+                       <li class="list-group-item">
+                         <strong>Origem do óleo: </strong> 
+                           {$oils.desorigin} 
+                       </li>
+                       <li class="list-group-item">
+                         <strong>Métodos de aplicação:</strong><br>
+                           Aromático:  /  Tópico:  /  Interno:<br>
+                           {if="$oils.inaromatic_use>0"} Sim {else} Não {/if}  /  
+                           {if="$oils.intopical_use>0"} Sim {else} Não {/if} /
+                           {if="$oils.internal_use>0"} Sim {else} Não {/if}
+                       </li>
+                    </ul>
+                  </div>
+                </div> <!-- Fim cartão -->
+                
+                <div class="card border-secondary align-self-top text-center">
+                  <h5 class="card-header">Usos primários comuns</h5>
+                  <div class="card-body text-coffee">
+                    <p class="card-text">
+                      <ul class="ul-oleos">
+                        <li>
+                          {$oils.desprimaryuses}
+                        </li>
+                      </ul>
+                    </p>
+                  </div>                  
+                </div>  <!-- Fim cartão -->
+                
+                <div class="card border-secondary align-self-top text-center">
+                  <h5 class="card-header">Métodos comuns de aplicação</h5>
+                  <div class="card-body text-coffee">
+                    <p class="card-text">
+                      <i class="fa fa-hand-paper-o" aria-hidden="true"></i>
+                      : {$oils.desapplications} <br> 
+                    </p>
+                  </div>
+                  <div class="card-footer text-muted">
+                    <i class="fa fa-hand-paper-o pl-2 pr-2" aria-hidden="true"> - Tópico</i>
+                    <i class="fa fa-fire pl-2 pr-2" aria-hidden="true"> - Aromático</i>
+                    <i class="fa fa-tint pl-2 pr-2" aria-hidden="true"> - Interno</i>
+                  </div>
+                </div>  <!-- Fim cartão -->
+                
+                <div class="card border-secondary align-self-top text-center">
+                  <h5 class="card-header">Benefícios primários</h5>
+                  <div class="card-body text-coffee">
+                    <p class="card-text">
+                      {$oils.desbenefit}
+                    </p>
+                  </div>
+                </div>  <!-- Fim cartão -->
+                
+                <div class="card border-secondary align-self-top text-center">
+                  <h5 class="card-header">Informações de segurança</h5>
+                  <div class="card-body text-coffee">
+                    <p class="card-text">
+                       {$oils.dessecurity}
+                    </p>
+                  </div>
+                </div> <!-- Fim cartão -->
+                
+              </div>
+              
+            </div>
+          </div>
+        </section> <!-- Fim seção Detalhes do Óleo -->
