@@ -1,6 +1,6 @@
 <?php
 
-	use \RDFConditions\Page;
+	use \RDFOils\Page;
 	use \RDFOils\PageAdmin;
 	use \RDFOils\Model\Conditions;
 	use \RDFOils\Model\User;
@@ -84,6 +84,42 @@
 
 			header('Location: /admin/conditions');
 			exit;
+		});
+
+	$app->get("/conditions-list", function()
+		{
+			$page = (isset($_GET['page'])) ? (int)$_GET['page'] : 1;
+
+			$search = (isset($_GET['search'])) ? $_GET['search'] : "";
+
+			$conditions = new Conditions();
+
+			if ($search != '') {
+				$pagination = $conditions->getConditionsPageSearch($search, $page);
+			} else {
+				$pagination = $conditions->getConditionsPage($page);
+			}			
+
+			$pages = [];
+
+			for ($i=1; $i <= $pagination["pages"]; $i++) 
+			{ 
+				array_push($pages, [
+					'link'=>'/conditions-list?'.http_build_query([
+						'page'=>$i,
+						'search'=>$search
+					]), 
+					'page'=>$i
+				]);
+			}
+
+			$page = new Page();
+
+			$page->setTpl("conditions-list", [
+				'conditions'=>$pagination["data"],
+				'pages'=>$pages,
+				'search'=>$search
+			]);
 		});
 
 ?>

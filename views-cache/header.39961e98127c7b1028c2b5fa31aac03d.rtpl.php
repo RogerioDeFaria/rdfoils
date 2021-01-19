@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<?php if(!class_exists('Rain\Tpl')){exit;}?><!DOCTYPE html> 
 <html lang="pt-br"> 
     <head> <!-- Meta tags Obrigatórias --> 
         <meta charset="utf-8"> 

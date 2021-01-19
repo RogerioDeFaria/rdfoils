@@ -1,4 +1,4 @@
-<!-- Content Wrapper. Contains page content -->
+<?php if(!class_exists('Rain\Tpl')){exit;}?><!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
 <!-- Content Header (Page header) -->
 <section class="content-header">
@@ -36,20 +36,22 @@
                   </tr>
                 </thead>
                 <tbody>
-                  {loop="$conditions"}
+                  <?php $counter1=-1;  if( isset($conditions) && ( is_array($conditions) || $conditions instanceof Traversable ) && sizeof($conditions) ) foreach( $conditions as $key1 => $value1 ){ $counter1++; ?>
+
                   <tr>
-                    <td>{$value.idcondition}</td>
-                    <td>{$value.desconditionname}</td>
-                    <td>{$value.description}</td>
-                    <td>{$value.desprimaryuses}</td>
-                    <td>{$value.desapplications}</td>
-                    <td>{$value.desURL}</td>
+                    <td><?php echo htmlspecialchars( $value1["idcondition"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
+                    <td><?php echo htmlspecialchars( $value1["desconditionname"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
+                    <td><?php echo htmlspecialchars( $value1["description"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
+                    <td><?php echo htmlspecialchars( $value1["desprimaryuses"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
+                    <td><?php echo htmlspecialchars( $value1["desapplications"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
+                    <td><?php echo htmlspecialchars( $value1["desURL"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
                     <td>
-                      <a href="/admin/conditions/{$value.idcondition}" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Editar</a>
-                      <a href="/admin/conditions/{$value.idcondition}/delete" onclick="return confirm('Deseja realmente excluir este registro?')" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i> Excluir</a>
+                      <a href="/admin/conditions/<?php echo htmlspecialchars( $value1["idcondition"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Editar</a>
+                      <a href="/admin/conditions/<?php echo htmlspecialchars( $value1["idcondition"], ENT_COMPAT, 'UTF-8', FALSE ); ?>/delete" onclick="return confirm('Deseja realmente excluir este registro?')" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i> Excluir</a>
                     </td>
                   </tr>
-                  {/loop}
+                  <?php } ?>
+
                 </tbody>
               </table>
             </div>

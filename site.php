@@ -3,6 +3,7 @@
 	use \RDFOils\Page;
 	use \RDFOils\Model\Oils;
 	use \RDFOils\Model\Blends;
+	use \RDFOils\Model\Conditions;
 
 	$app->get("/", function() 
 		{    
@@ -35,6 +36,24 @@
 			$page->setTpl("blend-detail", [
 				'blends'=>$blend->getValues()
 			]);
+		});
+
+	$app->get("/conditions/:desurl", function($desurl) 
+		{    
+			$conditions = new Conditions();
+
+			$conditionsblend = new Conditions();
+
+			$conditions->getFromURL($desurl);
+
+			$conditionsblend->getBlendFromURL($desurl);
+
+			$page = new Page();
+
+			$page->setTpl("conditions-detail", array(
+				"conditions"=>$conditions->getValues(),
+				"conditionsblend"=>$conditionsblend->getValues()
+			));
 		});
 
 ?>

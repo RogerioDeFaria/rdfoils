@@ -104,7 +104,7 @@ class Blends extends Model {
 		];
 	}
 
-	public function getBlendsPageSearch($search, $page = 1, $itemsPerPage = 6)
+	public function getBlendsPageSearch($search, $page = 1, $itemsPerPage = 12)
 	{
 		$start = ($page - 1) * $itemsPerPage;
 

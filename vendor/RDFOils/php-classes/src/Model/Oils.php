@@ -86,7 +86,7 @@ class Oils extends Model {
 		
 	}
 
-	public function getOilsPage($page = 1, $itemsPerPage = 6)
+	public function getOilsPage($page = 1, $itemsPerPage = 12)
 	{
 		$start = ($page - 1) * $itemsPerPage;
 
@@ -109,7 +109,7 @@ class Oils extends Model {
 		];
 	}
 
-	public function getOilsPageSearch($search, $page = 1, $itemsPerPage = 6)
+	public function getOilsPageSearch($search, $page = 1, $itemsPerPage = 12)
 	{
 		$start = ($page - 1) * $itemsPerPage;
 

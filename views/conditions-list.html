@@ -1,0 +1,49 @@
+        
+        <section id="home"> <!-- Início seção home  -->
+          <div class="container mt-5 pt-4 pb-3">
+            <div class="row">
+              <div class="col-md-10">
+                <h4>Relação de Condições</h4>
+              </div>
+              <div class="col-md-2 d-flex"> <!-- Pesquisa -->
+                <div class="align-self-right">
+                    <div class="box-tools">
+                        <form action="" class="search-form">
+                            <div class="form-group has-feedback" style="width: 150px;">
+                                <label for="search" class="sr-only">Pesquisar</label>
+                                <input type="text" class="form-control" name="search" id="search" placeholder="pesquisar" value="{$search}">
+                                <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+              </div> <!-- fim Pesquisa -->
+            </div>
+          </div>
+        </section> <!-- Fim seção home  -->
+        
+        <section class="caixa"> <!-- Início seção Lista Condições -->
+          <div class="container">
+            <div class="row text-center">
+                {loop="$conditions"}
+                    <a href="/conditions/{$value.desURL}" class="col-6 col-sm-4 col-md-3 py-2 bg-light"> <strong>{$value.desconditionname}</strong></a>
+                {/loop}
+            </div>
+
+                <br>
+                
+            <div class="row">                    
+                <div class="col-md-12">
+                    <div class="product-pagination text-center">
+                        <nav>
+                            <ul class="pagination">
+                            {loop="$pages"}
+                                <li class="page-item"><a class="page-link" href="{$value.link}">{$value.page}</a></li>
+                            {/loop}
+                            </ul>
+                        </nav>                        
+                    </div>
+                </div> 
+            </div>
+          </div>
+        </section> <!-- Fim seção Lista Condições -->
