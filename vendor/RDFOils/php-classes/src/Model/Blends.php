@@ -92,6 +92,7 @@ class Blends extends Model {
 			FROM tb_blends a
 			INNER JOIN tb_blends_facts b
 			ON a.idblend = b.tb_blends_idblend
+			ORDER BY a.desenglishname
 			LIMIT $start, $itemsPerPage;
 		");
 

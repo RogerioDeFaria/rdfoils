@@ -97,6 +97,7 @@ class Oils extends Model {
 			FROM tb_oils a
 			INNER JOIN tb_oil_facts b
 			ON a.idoil = b.tb_oils_idoil
+			ORDER BY a.desenglishname
 			LIMIT $start, $itemsPerPage;
 		");
 
