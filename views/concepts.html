@@ -14,56 +14,69 @@
         </section> <!-- Fim seção home  -->
         
         <section class="caixa"> <!-- Início seção Conceitos -->
-
-          <div class="dropdown mr-1">
-             <button type="button" class="btn btn-outline-info btn-block text-left dropdown-toggle" id="dropdownMenuOffset1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                 <strong> >>> O que é um óleo essencial? </strong>
-             </button>
-             <div class="dropdown-menu p-4 ml-5" aria-labelledby="dropdownMenuOffset1">
-                 <p>
+          <div id="accordion">
+            <div class="card">
+              <div class="card-header">
+                <a class="card-link" data-toggle="collapse" href="#collapseOne">
+                  <strong> >>> O que é um óleo essencial? </strong>
+                </a>
+              </div>
+              <div id="collapseOne" class="collapse" data-parent="#accordion">
+                <div class="card-body">
+                  <p>
                      <em>Apenas cerca de 10% das plantas do mundo produzem óleos essenciais. Os óleos essenciais são compostos aromáticos que elas produzem para diversas funções, desde conservação e reprodução, atraindo a polinização, até sua cura e regeneração.</em>
-                 </p>
-                 <p>
+                  </p>
+                  <p>
                      <em>Eles são produzidos a partir de nutrientes do solo e da água, combinados com a luz e o calor do sol, através da fotossíntese.</em>
-                 </p>
-                 <p class="mb-0">
-                      <em>Podem ser encontrados em diversas partes da planta, sendo extraídos, dentre outras, a partir de folhas, flores, frutos, sementes e raízes, por diferentes métodos de extração.</em>
-                 </p>
-             </div> 
-          </div>    <!-- Fim botão -->
-          <br><br>
-
-          <div class="dropdown mr-1">
-              <button type="button" class="btn btn-outline-info btn-block text-left dropdown-toggle" id="dropdownMenuOffset2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <strong>  >>> O que vem a ser um blend? </strong>
-              </button>
-              <div class="dropdown-menu p-4 ml-5" aria-labelledby="dropdownMenuOffset2">
+                  </p>
                   <p class="mb-0">
-                      <em>O blend, ou sinergia, é uma mistura única de óleos essenciais, combinando suas propriedades individuais, para potencializar um efeito desejado, além de obter um novo aroma.</em>
+                      <em>Podem ser encontrados em diversas partes da planta, sendo extraídos, dentre outras, a partir de folhas, flores, frutos, sementes e raízes, por diferentes métodos de extração.</em>
                   </p>
-              </div> 
-          </div>    <!-- Fim botão -->
-          <br><br>
+                </div>
+              </div>
+            </div>    <!-- Fim cartão -->
+            <br><br>
 
-          <div class="dropdown mr-1">
-              <button type="button" class="btn btn-outline-info btn-block text-left dropdown-toggle" id="dropdownMenuOffset2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <strong>  >>> Quais são os métodos de aplicação? </strong>
-              </button>
-              <div class="dropdown-menu p-4 ml-5 mb-0" aria-labelledby="dropdownMenuOffset2">
-                  <p>
-                    <i class="fa fa-hand-paper-o pl-3 pr-3" aria-hidden="true"> <strong> - Tópico  </strong></i>
-                    <em>Aplicar na sola dos pés ou na área afetada para resolver problemas específicos.</em><br>
+            <div class="card">
+              <div class="card-header">
+                <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+                <strong> >>> O que vem a ser um blend? </strong>
+              </a>
+              </div>
+              <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                <div class="card-body">
+                  <em>O blend, ou sinergia, é uma mistura única de óleos essenciais, combinando suas propriedades individuais, para potencializar um efeito desejado, além de obter um novo aroma.</em>
+                </div>
+              </div>
+            </div>    <!-- Fim cartão -->
+            <br><br>
+
+            <div class="card">
+              <div class="card-header">
+                <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+                  <strong> >>> Quais são os métodos de aplicação? </strong>
+                </a>
+              </div>
+              <div id="collapseThree" class="collapse" data-parent="#accordion">
+                <div class="card-body">
+                  <p class="mb-0">
+                      <p>
+                        <i class="fa fa-hand-paper-o pl-3 pr-3" aria-hidden="true"> <strong> - Tópico  </strong></i>
+                        <em>Aplicar na sola dos pés ou na área afetada para resolver problemas específicos.</em><br>
+                      </p>
+                      <p>
+                        <i class="fa fa-fire pl-3 pr-3" aria-hidden="true"> <strong> - Aromático  </strong></i>
+                        <em>Inspire ou use em um difusor.</em><br>
+                      </p>
+                      
+                        <i class="fa fa-tint pl-3 pr-3" aria-hidden="true"> <strong> - Interno  </strong></i>
+                        <em>Beber em água ou sob a língua ou em cápsulas de gel.</em>
                   </p>
-                  <p>
-                    <i class="fa fa-fire pl-3 pr-3" aria-hidden="true"> <strong> - Aromático  </strong></i>
-                    <em>Inspire ou use em um difusor.</em><br>
-                  </p>
-                  
-                    <i class="fa fa-tint pl-3 pr-3" aria-hidden="true"> <strong> - Interno  </strong></i>
-                    <em>Beber em água ou sob a língua ou em cápsulas de gel.</em>
-                  
-              </div> 
-          </div>    <!-- Fim botão -->
+                </div>
+              </div>
+            </div>    <!-- Fim cartão -->
+          
+          </div>    <!-- Fim Accordion -->
 
         </section> <!-- Fim seção Conceitos -->
  

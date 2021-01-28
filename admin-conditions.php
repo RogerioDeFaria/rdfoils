@@ -118,6 +118,7 @@
 			$page->setTpl("conditions-list", [
 				'conditions'=>$pagination["data"],
 				'pages'=>$pages,
+				'numPages'=>$pagination["pages"],
 				'search'=>$search
 			]);
 		});

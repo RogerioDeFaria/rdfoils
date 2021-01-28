@@ -133,6 +133,7 @@
 			$page->setTpl("blends-list", [
 				'blends'=>$pagination["data"],
 				'pages'=>$pages,
+				'numPages'=>$pagination["pages"],
 				'search'=>$search
 			]);
 		});

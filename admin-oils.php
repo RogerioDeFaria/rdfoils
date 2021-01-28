@@ -133,6 +133,7 @@ $app->get("/admin/oils", function()
 			$page->setTpl("oils-list", [
 				'oils'=>$pagination["data"],
 				'pages'=>$pages,
+				'numPages'=>$pagination["pages"],
 				'search'=>$search
 			]);
 		});
@@ -153,27 +154,6 @@ $app->get("/admin/oils", function()
 			$page = new Page();
 
 			$page->setTpl("conditions");
-		});
-
-	$app->get("/peppermint", function()
-		{
-			$page = new Page();
-
-			$page->setTpl("peppermint");
-		});
-
-	$app->get("/deepblue", function()
-		{
-			$page = new Page();
-
-			$page->setTpl("deepblue");
-		});
-
-	$app->get("/hematomas", function()
-		{
-			$page = new Page();
-
-			$page->setTpl("hematomas");
 		});
 
 ?>
